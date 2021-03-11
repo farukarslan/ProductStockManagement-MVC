@@ -1,0 +1,26 @@
+﻿@model List<yeniProje.Models.urun>
+@{
+    ViewBag.Title = "zam";
+}
+
+<h2>Zam Oranı Girişi</h2>
+
+@using (Html.BeginForm("zam", "urun", FormMethod.Post))
+{
+    <dl>
+        <dt>Ürün Zam Oranı Giriniz(% cinsinden):</dt>
+        <dt>(0 ila 100 arası veri girişi yapınız)</dt>
+        <dd>
+            <input type="text" name="zamorani" />
+        </dd>
+        <br />
+
+        <dt>Uygulamak için:</dt>
+        <dd><input type="submit" value="Uygula" /></dd>
+    </dl>
+}
+
+<br />
+<br />
+
+

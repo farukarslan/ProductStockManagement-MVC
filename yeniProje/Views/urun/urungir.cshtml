@@ -1,0 +1,30 @@
+﻿@model yeniProje.Models.urun
+@{
+    ViewBag.Title = "Ürün Girişi";
+}
+
+<h2>Ürün Girişi</h2>
+<div style="color:green;"><h4>@ViewBag.mesaj</h4></div>
+
+@using (Html.BeginForm("urungir", "urun"))
+{
+    <dl>
+        <dt>Ürün Adı</dt>
+        <dd>@Html.TextBoxFor(i => Model.urunismi)</dd>
+
+        <dt>Ürün Fiyatı</dt>
+        <dd>@Html.TextBoxFor(i => Model.fiyati)</dd>
+
+        <dt>Ürün Adeti</dt>
+        <dd>@Html.TextBoxFor(i => Model.adet)</dd>
+
+        <dt>Ürün Açıklaması</dt>
+        <dd>@Html.TextBoxFor(i => Model.aciklama)</dd>
+
+        <dt> Kayıt Etme işlemi için :</dt>
+        <dd><input type="submit" value="Kaydet" /></dd>
+    </dl>
+}
+
+
+

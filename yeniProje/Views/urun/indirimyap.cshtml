@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "indirimyap";
+}
+
+<h2>İndirim Yapımı</h2>
+
+@using (Html.BeginForm("indirimyap", "urun", FormMethod.Post))
+{
+    <dl>
+        <dt>İndirim Oranı (0-100 arası)</dt>
+        <dd><input type="text" name="indirimorani" /></dd>
+
+        <dt>İndirim Limiti</dt>
+        <dd><input type="text" name="indirimlimiti" /></dd>
+
+        <dt>Uygulamak için</dt>
+        <dd><input type="submit" /></dd>
+    </dl>
+}

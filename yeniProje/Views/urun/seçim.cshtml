@@ -1,0 +1,27 @@
+﻿@model yeniProje.Models.urun
+    @{
+        ViewBag.Title = "seçim";
+    }
+
+    <h2>seçim</h2>
+
+
+    <td>@Html.ActionLink("Max Fiyatlı", "seçim", "urun", new { id = 1 },null)</td>&nbsp;&nbsp;&nbsp;
+    <td>@Html.ActionLink("Min Fiyatlı", "seçim", "urun", new { id = 2 }, null)</td>&nbsp;&nbsp;&nbsp;
+    <td>@Html.ActionLink("Stokta en yüksek", "seçim", "urun",  new { id = 3 }, null)</td>&nbsp;&nbsp;&nbsp;
+    <br />
+    <br />
+             
+           <dl>
+               <dt>Ürün İsmi</dt>
+               <dd>@Html.DisplayFor(i => i.urunismi)</dd>
+
+               <dt>Ürün Fiyatı</dt>
+               <dd>@Html.DisplayFor(i => i.fiyati)</dd>
+
+               <dt>Ürün Adeti</dt>
+               <dd>@Html.DisplayFor(i => i.adet)</dd>
+
+               <dt>Ürün Açıklaması</dt>
+               <dd>@Html.DisplayFor(i => i.aciklama)</dd>
+           </dl>
